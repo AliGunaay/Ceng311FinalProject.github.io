@@ -47,8 +47,9 @@ $(document).ready(function () {
     // AJAX call to external weather API
     const apiKey = "a0b01f06d48ad9d0eff807fd2eca6c8c";  
     const city = "Ankara";  
-    $.getJSON(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`, function (data) {
-        let weather = `Current weather in ${city}: ${Math.round(data.main.temp - 273.15)}°C, ${data.weather[0].description}`;
-        $('#ajax-weather').text(weather);
-    });
+    $.getJSON(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`, function (data) {
+    let weather = `Current weather in ${city}: ${Math.round(data.main.temp - 273.15)}Â°C, ${data.weather[0].description}`;
+    $('#ajax-weather').text(weather);
+});
+
 });
